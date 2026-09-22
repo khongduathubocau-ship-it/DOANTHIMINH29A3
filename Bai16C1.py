@@ -3,14 +3,13 @@ import math
 m = int(input("Nhập số nguyên dương m: "))
 n = int(input("Nhập số nguyên dương n (m > n): "))
 
-# Tính UCLN bằng thuật toán Euclid
-a, b = m, n
-while b != 0:
-    a, b = b, a % b
-ucln = a
+for i in range (1, m*n):
+    if m%i == 0 and n%i == 0:
+        ucln=i
+print(ucln)
 
-# Tính BCNN
-bcnn = (m * n) // ucln
-
-print(f"Ước chung lớn nhất của {m} và {n} là: {ucln}")
-print(f"Bội chung nhỏ nhất của {m} và {n} là: {bcnn}")                                    
+for i in range (1, m*n):
+    if i%m==0 and i%n==0:
+        bcnn=i
+        break
+print(bcnn)
