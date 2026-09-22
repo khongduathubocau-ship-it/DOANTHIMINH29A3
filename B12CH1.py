@@ -10,7 +10,9 @@ R = float(input("Nhập bán kính R: "))
 # Tính khoảng cách từ M đến I
 d = math.sqrt((x - a)**2 + (y - b)**2)
 
-if d <= R:
-    print("True")  # Nằm trong hoặc trên hình tròn
+if d < R:
+    print("Điểm M nằm trong hình tròn")  
+elif d == R:
+    print ("Điểm M nằm trên hình tròn")
 else:
-    print("False") # Nằm ngoài hình tròn
+    print("Điểm M nằm ngoài hình tròn") 
