@@ -17,7 +17,7 @@ else:
             kt = False
             break # Thoát vòng lặp ngay khi tìm thấy ước số
 
-# In kết quả dựa vào biến cờ (flag)
+# In kết quả 
 if kt:
     print(f"{n} là số nguyên tố.")
 else:
