@@ -1,3 +1,4 @@
+import math
 class Triple:
     def __init__(self,a,b,c):
         self.a = a
@@ -18,8 +19,16 @@ class Triple:
             self.b + self.c > self.a):
             return True
         return False
-t = Triple(1, 2, 3)
+class Tamgiac(Triple):
+    def Tinhdientich(self):
+        if not self.isTriple():
+            return "Không phải tam giác, không thể tính diện tích"
+        p = self.S /2
+        dientich =  math.sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
+        return dientich
+t = Tamgiac(1, 2, 3)
 print("Tổng ban đầu:", t.S)
-t.Change(2,3,4)
-print("Tổng sau:",t.S)
-print("Có phải là tam giác không?:",t.isTriple())
+t.Change(2, 3, 4)
+print("Tổng sau:", t.S)
+print("Có phải là tam giác không?:", t.isTriple())
+print("Diện tích tam giác:", round(t.Tinhdientich(), 2))
